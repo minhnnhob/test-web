@@ -1,0 +1,306 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Oranienbaum&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Font and typography ==========*/
+  --section-1-font: "Poppins", sans-serif;
+  --section-2-font: "Inter", sans-serif;
+  --section-2-font-2: "Italiana", sans-serif;
+}
+
+/*=============== BASE CSS ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=============== CLASS CSS ===============*/
+
+/*=============== SECTION 1 ===============*/
+
+.section-1 {
+  font-family: var(--section-1-font);
+  background-color: white;
+  /* text-align: center; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 2% 10%;
+  gap: 2%;
+}
+
+.box-1 {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f8;
+  border-radius: 4%;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #797979;
+  margin-top: 4%;
+  margin-left: 4%;
+  z-index: 1;
+}
+
+.title-2 {
+  font-weight: 500;
+  position: absolute;
+  color: white;
+  letter-spacing: 1px;
+  bottom: 120px;
+  left: 25px;
+  z-index: 10;
+}
+
+.title-3 {
+  font-size: 100px;
+  font-weight: 500;
+  letter-spacing: -6px;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 20px;
+  z-index: 10;
+}
+
+.image-125 {
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  z-index: 1;
+}
+
+.gradient-layer-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 4%;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.407) 0%,
+    rgba(229, 229, 229, 0) 100%
+  );
+  z-index: 10;
+}
+
+.box-2 {
+  /* background-color: blueviolet; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  overflow: hidden;
+}
+
+.child-1 {
+  background-color: #f7f7f8;
+  height: 45%;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-4 {
+  font-weight: 500;
+  margin: 4% 8%;
+  padding-top: 4%;
+  width: 70%;
+  z-index: 1;
+}
+
+.features-1 {
+  display: flex;
+  gap: 4%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.title-feature {
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 4%;
+  margin-left: 4%;
+  z-index: 1;
+  width: 50%;
+}
+
+.icon-1 {
+  width: 30%;
+  height: 80%;
+}
+
+.feature-1 {
+  width: 30%;
+  height: 50%;
+  background-color: #f7f7f8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #151588;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.line {
+  padding-top: 60px;
+  height: 75%;
+  width: 1.2px;
+  border: none;
+
+  background-color: #2e2e2e14;
+  margin-top: 4%;
+}
+
+.child-2 {
+  background-color: #151588;
+  height: 55%;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-change {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.shop-all {
+  background-color: #827c6c;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+/*=============== SECTION 2 ===============*/
+
+.section-2 {
+  font-family: var(--section-2-font2);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* background-color: aqua; */
+  /* margin: 30px 0px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content-2 {
+  font-family: var(--section-2-font-2);
+  width: 30%;
+  margin-left: 8%;
+}
+
+.title-2-1 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #402c22;
+  margin-bottom: 5px;
+  font-family: var(--section-2-font);
+}
+
+.title-2-2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #402c22;
+  margin-bottom: 40px;
+  letter-spacing: 0.6px;
+}
+
+.hearder-t-2-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-2-3 {
+    width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  color: #402c22;
+  margin-bottom: 20px;
+  letter-spacing: .4px;
+}
+
+.description-2-1{
+    width: 80%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #402c22;
+    margin-bottom: 20px;
+    letter-spacing: .8px;
+    display: none;
+}
+
+
+.icon{
+    width: 10%;
+    height: 80%;
+    font-family: var(--section-2-font);
+    user-select: none;
+}
+
+.gallery-2 {
+  display: flex;
+  gap: 1%;
+  width: 70%;
+  height: 80%;
+  /* background-color: blue; */
+  justify-content: end;
+}
+
+.img-2-1 {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.img-2-22 {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+
+
+/*=============== SECTION 33 ===============*/

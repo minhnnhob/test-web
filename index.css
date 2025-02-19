@@ -25,7 +25,6 @@
   font-style: normal;
 }
 
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Font and typography ==========*/
@@ -58,6 +57,7 @@ html {
 
 .container {
   width: 120rem;
+  margin: auto;
 }
 
 /*=============== SECTION 1 ===============*/

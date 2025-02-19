@@ -1,0 +1,477 @@
+/*=============== GOOGLE FONTS ===============*/
+/* Chỉ import những biến thể cần dùng để giảm số request */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+/*=============== FONT FACE ===============*/
+@font-face {
+  font-family: "OptimaNova";
+  src: url("assets/fonts/OptimaNovaLTProRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OptimaNova";
+  src: url("assets/fonts/OptimaNovaLTProMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OptimaNova";
+  src: url("assets/fonts/OptimaNovaLTProLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*=============== VARIABLES ===============*/
+:root {
+  /* Font Families */
+  --font-section1: 'Poppins', sans-serif;
+  --font-section2: 'Inter', sans-serif;
+  --font-optima: 'OptimaNova', sans-serif;
+  --font-beVietnam: 'Be Vietnam Pro', sans-serif;
+
+  /* Colors */
+  --color-dark: #1e1e1e;
+  --color-light-bg: #f7f7f8;
+  --color-secondary: #827c6c;
+  --color-divider: rgba(0, 0, 0, 0.11);
+  --color-text: #402c22;
+
+  /* Spacing (giá trị tính theo rem, giả sử 1rem = 16px) */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.625rem; /* 10px */
+  --radius-md: 1.25rem;  /* 20px */
+}
+
+/*=============== BASE STYLES ===============*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+/*=============== SECTION 1 ===============*/
+.section-1 {
+  font-family: var(--font-section1);
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.6875rem;           /* ~27px */
+  margin: 2.1875rem 10.25rem; /* ~35px 164px */
+}
+
+/* --- BOX-1: sử dụng grid để xếp lớp các phần tử --- */
+.box-1 {
+  width: 48.875rem; /* ~782px */
+  height: 53.25rem;  /* ~852px */
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: grid;
+}
+
+/* Tất cả các phần tử con của .box-1 được xếp chồng lên nhau */
+.box-1 > * {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+/* Vị trí tương đối được mô phỏng qua margin và align-self/justify-self */
+
+/* Tiêu đề nhỏ ở góc trên bên trái */
+.title {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 500;
+  color: var(--color-dark);
+  line-height: 1.42;
+  opacity: 0.4;
+  /* Đặt ở góc trên trái với khoảng cách tương đương */
+  align-self: start;
+  justify-self: start;
+  margin: 2.4375rem 0 0 2.5rem; /* top: 39px; left: 40px */
+}
+
+/* Lớp gradient phủ toàn bộ nền */
+.gradient-layer-1 {
+  /* Chiếm toàn bộ ô lưới, không cần margin */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.407) 0%,
+    rgba(229, 229, 229, 0) 100%
+  );
+  z-index: 10;
+}
+
+/* Hình ảnh nền (ở dưới cùng, bên trái) */
+.image-125 {
+  width: 42.9375rem;  /* 687px */
+  height: 41.6875rem; /* 667px */
+  object-fit: cover;
+  /* Đặt về phía dưới bên trái */
+  align-self: end;
+  justify-self: start;
+  margin-left: 3.6875rem; /* 59px */
+}
+
+/* Tiêu đề “SUPER”: đặt cách phía dưới theo khoảng cách so sánh với container */
+.title-2 {
+  font-size: 1.9375rem;  /* 31px */
+  line-height: 2.325rem; /* 37.2px */
+  letter-spacing: -0.93px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 1; /* Đảm bảo hiển thị trên nền */
+  /* Giả lập vị trí ban đầu: dùng margin-top để đẩy xuống */
+  align-self: start;
+  justify-self: start;
+  margin: 39.375rem 0 0 2.6875rem; 
+  /* 39.375rem ≈ 630px (so với thiết kế cũ) */
+}
+
+/* Tiêu đề “Smart”: cũng được đặt theo khoảng cách tương ứng */
+.title-3 {
+  font-size: 9.375rem;  /* 150px */
+  font-weight: 500;
+  letter-spacing: -10.5px;
+  color: #fff;
+  z-index: 1;
+  align-self: start;
+  justify-self: start;
+  margin: 45.6875rem 0 0 2.3125rem; 
+  /* 45.6875rem ≈ 731px, left: 37px */
+}
+
+/* --- BOX-2 --- */
+.box-2 {
+  width: 48.875rem; /* ~782px */
+  height: 53.25rem;  /* ~852px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.6875rem;  /* ~27px */
+}
+
+/* CHILD-1: không cần absolute */
+.child-1 {
+  background-color: var(--color-light-bg);
+  height: 23.1875rem; /* 371px */
+  width: 100%;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.3125rem; /* 85px */
+  text-align: center;
+  padding: var(--space-sm);
+}
+
+/* Tiêu đề bên trong child-1 */
+.title-4 {
+  color: var(--color-dark);
+  font-size: 1.9375rem; /* 31px */
+  font-weight: 500;
+  width: 34rem;         /* 544px */
+  height: 4.625rem;      /* 74px */
+  margin-top: 2.8125rem; /* 45px */
+  line-height: 2.325rem; /* 37.2px */
+  letter-spacing: -0.93px;
+}
+
+/* Danh sách các tính năng */
+.features-1 {
+  display: flex;
+  height: 8.25rem;      /* 132px */
+  width: 42.5625rem;    /* 681px */
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.feature-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10.1875rem; /* 163px */
+  margin: 1.5rem 3rem 0.5rem 3rem; /* (top: 24px, left/right: 48px, bottom: 8px) */
+  line-height: 1.38;
+  letter-spacing: -0.34px;
+}
+
+.title-feature {
+  width: 7.6875rem; /* 123px */
+  height: 2.75rem;   /* 44px */
+  text-align: center;
+  font-size: 1.0625rem; /* 17px */
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-top: 0.5rem;   /* 8px */
+  line-height: 1.38;
+  letter-spacing: -0.34px;
+}
+
+.icon-1 {
+  width: 3rem;  /* 48px */
+  height: 3rem; /* 48px */
+  flex-shrink: 0;
+}
+
+.line {
+  width: 1px;
+  height: 8.25rem; /* 132px */
+  background-color: var(--color-divider);
+  border: none;
+}
+
+/* CHILD-2: dùng grid để xếp lớp nút và hình ảnh */
+.child-2 {
+  height: 28.375rem; /* 454px */
+  width: 100%;
+  border-radius: var(--radius-sm);
+  display: grid;
+}
+
+/* Các phần tử con của child-2 chồng lên nhau */
+.child-2 > * {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+/* Nút “Shop all”: đặt vị trí bằng margin trong grid cell */
+.shop-all {
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-family: var(--font-beVietnam);
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;         /* 8px */
+  width: 7.75rem;       /* 124px */
+  height: 2.875rem;     /* 46px */
+  padding: 1rem 1.5rem; /* 16px 24px */
+  border-radius: 3.5rem;/* 56px */
+  /* Giả lập vị trí: sử dụng margin để đẩy xuống, sang phải */
+  align-self: start;
+  justify-self: start;
+  margin: 13.78125rem 0 0 20.5625rem; /* top: ~220.5px; left: ~329px */
+}
+
+/* Hình ảnh thay đổi: sử dụng object-fit và chiếm toàn bộ không gian grid */
+.image-change {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*=============== SECTION 2 ===============*/
+.section-2 {
+  font-family: var(--font-optima);
+  width: 100%;
+  margin-top: 4.75rem;    /* 76px */
+  margin-bottom: 7.4375rem; /* 119px */
+  display: flex;
+  gap: 6.1875rem;        /* 99px */
+}
+
+.main-content-2 {
+  font-family: var(--font-optima);
+}
+
+.title-2-1 {
+  width: 8.125rem;   /* 130px */
+  height: 1.25rem;   /* 20px */
+  font-size: 1rem;   /* 16px */
+  font-weight: 500;
+  color: var(--color-text);
+  font-family: var(--font-section2);
+  line-height: 1.25rem; /* 20px */
+  margin-top: 9.3125rem;  /* 149px */
+  margin-left: 3.8125rem; /* 61px */
+  opacity: 0.7;
+}
+
+.title-2-2 {
+  width: 31.125rem;    /* 498px */
+  font-size: 3.9375rem; /* 63px */
+  font-weight: 400;
+  margin-top: 0.9375rem;  /* 15px */
+  margin-left: 3.6875rem; /* 59px */
+  color: var(--color-text);
+  line-height: 4.17375rem; /* 66.78px */
+  letter-spacing: -1.26px;
+  margin-bottom: 3.1875rem; /* 51px */
+}
+
+.hearder-t-2-1 {
+  display: flex;
+  width: 28.25rem;   /* 452px */
+  justify-content: space-between;
+  margin-left: 3.6875rem; /* 59px */
+  margin-top: 1.25rem;    /* 20px */
+}
+
+.title-2-3 {
+  font-size: 1.375rem;  /* 22px */
+  color: var(--color-text);
+  line-height: 1.6775rem; /* 26.84px */
+  letter-spacing: -0.44px;
+  margin-bottom: 1rem;   /* 16px */
+}
+
+.description-2-1 {
+  width: 25.1875rem;   /* 403px */
+  font-size: 1rem;     /* 16px */
+  font-family: var(--font-section2);
+  color: var(--color-text);
+  font-weight: 500;
+  line-height: 1.4375rem; /* 23px */
+  text-align: justify;
+  hyphens: auto;
+  display: none;
+  opacity: 0.8;
+  margin-bottom: 1.8125rem; /* 29px */
+  margin-left: 3.6875rem;   /* 59px */
+}
+
+.icon {
+  width: 0.875rem; /* 14px */
+  height: 0.875rem; /* 14px */
+  font-family: var(--font-section2);
+  user-select: none;
+}
+
+.line-2-2 {
+  width: 28.25rem;  /* 452px */
+  height: 1px;
+  background-color: #d9d5d3;
+  margin-left: 3.6875rem; /* 59px */
+  border: none;
+}
+
+.gallery-2 {
+  display: flex;
+  gap: var(--space-sm); /* 16px */
+  justify-content: flex-end;
+}
+
+.img-2-1 {
+  width: 47.75rem;   /* 764px */
+  height: 53.1875rem; /* 851px */
+  object-fit: cover;
+}
+
+.img-2-22 {
+  width: 30.25rem;    /* 484px */
+  height: 34.4375rem;  /* 551px */
+  object-fit: cover;
+}
+
+/*=============== SECTION 3 ===============*/
+/* (Section 3 hiện tại đang được bật theo HTML ban đầu) */
+.section-3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin: 1.25rem 0; /* 20px */
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-3-1 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-3-1 :nth-child(1) {
+  width: 30%;
+  margin-right: 30%;
+  margin-bottom: 16%;
+  margin-top: 2%;
+}
+
+.main-content-3 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  background-color: blue;
+}
+
+.gallery-3-2 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-3-2 :nth-child(1) {
+  width: 50%;
+  margin-right: 5%;
+  margin-bottom: 4%;
+  margin-top: 10%;
+}
+
+.gallery-3-2 :nth-child(2) {
+  width: 35%;
+  margin-right: 40%;
+  margin-bottom: 10%;
+  margin-top: 2%;
+}
+
+.header-33 {
+  position: relative;
+  margin-top: 2.5rem; /* 40px */
+  font-size: 0.75rem; /* 12px */
+  font-family: var(--font-optima);
+  font-weight: 500;
+  padding: 0 1.25rem; /* 20px */
+  text-align: center;
+}
+
+.header-33::before,
+.header-33::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.367);
+}
+
+.header-33::before {
+  left: 2.5rem;  /* 40px */
+  transform: translateY(-50%);
+}
+
+.header-33::after {
+  right: 2.5rem; /* 40px */
+  transform: translateY(-50%);
+}

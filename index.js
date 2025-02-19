@@ -15,3 +15,15 @@ function toggleDescription(element) {
         icon.textContent = "+";
     }
 }
+
+var titleText = document.title + " "; 
+var speed = 300; 
+
+function animateTitle() {
+  document.title = titleText;
+  titleText = titleText.substring(1) + titleText.charAt(0);
+  setTimeout(animateTitle, speed);
+}
+
+
+window.onload = animateTitle;
